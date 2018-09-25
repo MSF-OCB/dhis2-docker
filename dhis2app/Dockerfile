@@ -1,0 +1,12 @@
+FROM tomcat:8.5.29-jre8
+
+RUN rm -rf /usr/local/tomcat/webapps/ROOT && \
+    mkdir -p /opt/dhis2/config/apps/ && \
+    echo "export JAVA_OPTS=$JAVA_OPTS\nexport DHIS2_HOME='/opt/dhis2/config'" >> /usr/local/tomcat/bin/setenv.sh
+
+COPY dhis.war /usr/local/tomcat/webapps/ROOT.war
+COPY hibernate.properties /opt/dhis2/config/hibernate.properties
+COPY dhis.conf /opt/dhis2/config/dhis.conf
+COPY wait-for-it.sh wait-for-it.sh
+COPY dhis2-export-app /opt/dhis2/config/apps/dhis2-export-app/
+
