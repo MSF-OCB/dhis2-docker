@@ -1,6 +1,2 @@
 .env
 *.war
-*/*.sql.gz
-dhis2app/
-dhis2db/
-build/
