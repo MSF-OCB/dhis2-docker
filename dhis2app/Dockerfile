@@ -1,7 +1,7 @@
 #FROM tomcat:8.5.29-jre8
 FROM tomcat:8.5-jre8-alpine
 
-RUN rm -rf /usr/local/tomcat/webapps/*
+RUN apk add curl && rm -rf /usr/local/tomcat/webapps/*
 COPY setenv.sh /usr/local/tomcat/bin/setenv.sh
 COPY dhis.war /usr/local/tomcat/webapps/ROOT.war
 COPY hibernate.properties /opt/dhis2/config/hibernate.properties
