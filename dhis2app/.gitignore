@@ -1,4 +1,4 @@
 dhis2-export-app/
-dhis.war
+*.war
 static
-.conf
+*.conf
