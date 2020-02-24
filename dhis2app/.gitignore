@@ -1,4 +1,3 @@
 dhis2-export-app/
 *.war
-static
 *.conf
