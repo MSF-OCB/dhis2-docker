@@ -18,3 +18,20 @@ connection.schema = update
 
 # Encryption password (sensitive)
 encryption.password = xxxx
+
+# LDAP Configuration
+
+# LDAP server URL
+ldap.url = 
+
+# LDAP manager entry distinguished name
+ldap.manager.dn = 
+
+# LDAP manager entry password
+ldap.manager.password = 
+
+# LDAP base search
+ldap.search.base = 
+
+# LDAP search filter
+ldap.search.filter = 
