@@ -1,6 +1,6 @@
-FROM postgres:10
+FROM postgres:13
 
 RUN apt-get update \
-    && apt-get install -y postgresql-contrib-10 postgresql-10-postgis-2.4 \
+    && apt-get install -y postgresql-contrib-13 postgis \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
